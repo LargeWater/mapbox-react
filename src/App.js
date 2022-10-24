@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
-// import Tooltip from '../components/Tooltip';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibGFyZ2V3YXRlciIsImEiOiJjbDZoOTAwZWkweWNjM2JvYThnbm03YjMzIn0.r11MoNzvczr0RUCDmi9brQ';
 
@@ -29,6 +28,8 @@ export default function App() {
       setZoom(map.current.getZoom().toFixed(2));
     });
   });
+
+  map.addControl(new mapboxgl.NavigationControl());
 
   
   return (
