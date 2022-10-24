@@ -29,7 +29,6 @@ export default function App() {
     });
   });
 
-  map.addControl(new mapboxgl.NavigationControl());
 
   
   return (
